@@ -39,7 +39,7 @@ class ProductController extends Controller
         try {
             $product = Product::find($id);
 
-            return response()->json(['products' => $product]);
+            return response()->json(['product' => $product]);
         } catch (Exception $e) {
             return response()->json(['message' => $e->getMessage()], 400);
         }
